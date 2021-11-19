@@ -1,0 +1,103 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-image:url("/images/popcorntime.jpg");
+    background-repeat:repeat;
+    background-size: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin:0;
+}
+
+.movie-container{
+    margin: 20px 0;
+}
+
+.movie-container select{
+    background-color: white;
+    border:0;
+    font-size: 15px;
+    margin: 20px;
+    padding:10px;
+
+}
+
+.seat{
+    background-color:red;
+    height: 12px;
+    width:15px;
+    margin: 3px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.seat.selected{
+    background-color:blue;
+}
+.seat.occupied{
+    background-color: purple;
+}
+.row{
+    display: flex;
+}
+
+.seat:nth-of-type(2){
+    margin-right: 20px;
+}
+.seat:nth-last-of-type(2){
+    margin-left: 20px;
+}
+
+.seat:not(.occupied):hover{
+    cursor: pointer;
+    /* expands when you hover over the seat */
+    transform:scale(1.4);
+}
+
+.showcase .seat:not(.occupied):hover{
+    cursor:default;
+    /* expands when you hover over the seat */
+    transform:scale(1);
+}
+
+.showcase{
+    background-color: white;
+    list-style-type:none;
+    display:flex;
+    justify-content:space-between;
+    margin: 10px;
+    padding: 5px;
+}
+
+.showcase li{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin:5px;
+}
+
+.showcase li small{
+    margin-left: 10px;
+}
+
+.screen{
+    background-color: white;
+    height:90px;
+    width:100%;
+    margin:10px;
+    box-shadow:0 0 10px 10px violet;
+    transform: rotateX(-45deg);
+}
+
+.container{
+    perspective: 900px;
+}
+
+p.text span{
+    color:mediumvioletred;
+}
